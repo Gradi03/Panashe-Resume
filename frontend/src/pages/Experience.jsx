@@ -9,7 +9,7 @@ const experiences = [
     duration: 'Jan 2024 – Present (1 yr 3 mos)',
     description:
       'Analyzing complex data sets and applying machine learning algorithms to extract insights. Building predictive models and data pipelines.',
-    image: '/assets/databalk.jpg',
+    image: '/src/assets/panden.jpg',
   },
   {
     role: 'Data Analyst',
@@ -61,7 +61,7 @@ const Experience = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
             >
-              <span className="absolute -left-4 w-8 h-8 bg-blue-500 rounded-full border-4 border-white"></span>
+              <span className="absolute -left-4 w-8 h-8 bg-blue-500 rounded-full border-4 border-white-300"></span>
               {exp.image && (
                 <img
                   src={exp.image}
