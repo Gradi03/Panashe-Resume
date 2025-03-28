@@ -6,7 +6,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-16 bg-white text-gray-900 flex flex-col md:flex-row items-center justify-center px-6 md:px-12 space-y-10 md:space-y-0"
+      className="py-16 bg-gradient-to-br from-blue-50 text-gray-900 flex flex-col md:flex-row items-center justify-center px-6 md:px-12 space-y-10 md:space-y-0"
     >
       {/* Text Section */}
       <div className="md:w-1/2 space-y-6 text-center md:text-left">

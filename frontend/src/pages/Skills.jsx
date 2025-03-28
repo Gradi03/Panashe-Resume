@@ -4,7 +4,7 @@ import { FaPython, FaDatabase, FaCloud, FaChartLine, FaCog, FaFileExcel } from '
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-24 bg-white text-gray-900 text-center">
+    <section id="skills" className="py-24 bg-gradient-to-br from-blue-50 text-gray-900 text-center">
       <motion.h2
         className="text-5xl font-extrabold text-gray-800 mb-10"
         initial={{ opacity: 0, y: -20 }}
@@ -33,7 +33,7 @@ const Skills = () => {
         ].map((skill, index) => (
           <motion.div
             key={index}
-            className="flex flex-col items-center bg-gray-100 rounded-lg p-6 shadow-lg hover:shadow-2xl transform transition-all duration-300"
+            className="flex flex-col items-center bg-white-200 rounded-lg p-6 shadow-lg hover:shadow-2xl transform transition-all duration-300"
             whileInView={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: 30 }}
             viewport={{ once: true }}

@@ -1,17 +1,52 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import Swal from 'sweetalert2';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Add your form submission logic here
+    setIsLoading(true);
+
+    const form = e.target;
+    const formDataToSubmit = new FormData(form);
+    formDataToSubmit.append('access_key', 'fdd12f64-b232-4aaa-9fe8-001c3b450a15'); // Web3Forms Access Key
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formDataToSubmit,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        Swal.fire({
+          icon: 'success',
+          title: 'Form Submitted Successfully!',
+          text: 'We have received your message and will get back to you soon.',
+        });
+
+        form.reset();
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        throw new Error(data.message);
+      }
+    } catch (error) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: `Something went wrong! ${error.message}`,
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -74,8 +109,9 @@ const ContactForm = () => {
           <button
             type="submit"
             className="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold text-lg hover:bg-indigo-700 transition duration-300"
+            disabled={isLoading}
           >
-            Send Message
+            {isLoading ? 'Sending...' : 'Send Message'}
           </button>
         </motion.form>
       </div>

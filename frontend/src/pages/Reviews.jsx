@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const Reviews = () => {
 
 
   return (
-    <section id="contact" className="py-24 bg-gradient-to-br from-indigo-50 to-white text-gray-900">
+    <section className="py-24 bg-gradient-to-br from-blue-50 text-gray-900">
       <div className="max-w-3xl mx-auto px-6">
      
 

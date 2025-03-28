@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import panden from '../assets/panden.jpg'; 
+import cashCrusadersLogo from '/assets/logos/cashcrusaders.jpg'; // Add the logo import
 
 const experiences = [
   {
@@ -19,6 +20,7 @@ const experiences = [
     duration: 'Mar 2023 – Feb 2024 (1 yr)',
     description:
       'Performed data analysis and reporting to drive informed business decisions. Created dashboards and automated reporting processes.',
+    logo: cashCrusadersLogo, // Add the logo for Cash Crusaders
   },
   {
     role: 'Junior Front-House Manager',
@@ -63,16 +65,30 @@ const Experience = () => {
               transition={{ duration: 0.8, delay: index * 0.2 }}
             >
               <span className="absolute -left-4 w-8 h-8 bg-blue-500 rounded-full border-4 border-white-300"></span>
+
+              {/* Display logo above the role */}
+              {exp.logo && (
+                <img
+                  src={exp.logo}
+                  alt={exp.company}
+                  className="w-24 h-24 object-contain mb-4 border-2 border-blue-500 rounded-md" // Added blue border here
+                />
+              )}
+
               {exp.image && (
                 <img
+                  loading="lazy"
                   src={exp.image}
                   alt={exp.company}
                   className="w-28 h-28 md:w-36 md:h-36 object-cover rounded-xl shadow-md border-2 border-blue-500"
                 />
               )}
+
               <div className="text-left flex-1">
                 <h3 className="text-2xl font-bold text-blue-600">{exp.role}</h3>
-                <p className="text-lg text-gray-700 font-medium mt-1">{exp.company} ({exp.location})</p>
+                <p className="text-lg text-gray-700 font-medium mt-1">
+                  {exp.company} ({exp.location})
+                </p>
                 <p className="text-md font-semibold text-gray-600 mt-2">{exp.duration}</p>
                 <p className="text-gray-700 text-md leading-relaxed mt-2">{exp.description}</p>
               </div>
@@ -97,10 +113,12 @@ const Experience = () => {
 
           {/* New Image */}
           <div className="w-full md:w-1/2 flex justify-center">
-          <img src="/assets/scottburghhigh.png"alt="Scottburgh high 100% matric pass rate in 2019"
-              className="w-full max-w-md rounded-xl shadow-2xl border-4 border-blue-500" />
-
-            
+            <img
+              src="/assets/scottburghhigh.png"
+              alt="Scottburgh high 100% matric pass rate in 2019"
+              className="w-full max-w-md rounded-xl shadow-2xl border-4 border-blue-500"
+              loading="lazy"
+            />
           </div>
         </div>
 

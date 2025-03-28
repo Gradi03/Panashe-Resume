@@ -16,7 +16,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-t from-white via-white to-gray-50 text-gray-900 px-6 py-12 relative overflow-hidden"
+      className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-blue-50 text-gray-900 px-6 py-12 relative overflow-hidden"
     >
       {/* Overlay for extra design (optional) */}
       <div className="absolute inset-0 bg-black opacity-20"></div>
