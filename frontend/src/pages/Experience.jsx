@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import panden from '/src/assets/panden.jpg'; // Import images properly
+import Scottburghhigh from '../assets/Scottburghhigh.png'; // Import images properly
 
 const experiences = [
   {
@@ -9,7 +11,7 @@ const experiences = [
     duration: 'Jan 2024 – Present (1 yr 3 mos)',
     description:
       'Analyzing complex data sets and applying machine learning algorithms to extract insights. Building predictive models and data pipelines.',
-    image: '/src/assets/panden.jpg',
+    image: panden, // Use the imported image
   },
   {
     role: 'Data Analyst',
@@ -79,20 +81,30 @@ const Experience = () => {
           ))}
         </div>
 
-       {/* Embedded Video */}
-<div className="mt-20 flex justify-center">
-  <div className="w-full max-w-2xl rounded-xl overflow-hidden shadow-2xl border-4 border-blue-500">
-    <iframe
-      width="100%"
-      height="405"
-      src="https://www.youtube.com/embed/wJIfAvE7hWE"
-      title="How I Became an AI Engineer"
-      frameBorder="0"
-      allowFullScreen
-      className="rounded-lg"
-    ></iframe>
-  </div>
-</div>
+        {/* Embedded Video & New Image */}
+        <div className="mt-20 flex flex-col md:flex-row justify-center items-center gap-6">
+          {/* Video */}
+          <div className="w-full md:w-1/2 rounded-xl overflow-hidden shadow-2xl border-4 border-blue-500">
+            <iframe
+              width="100%"
+              height="405"
+              src="https://www.youtube.com/embed/wJIfAvE7hWE"
+              title="How I Became an AI Engineer"
+              frameBorder="0"
+              allowFullScreen
+              className="rounded-lg"
+            ></iframe>
+          </div>
+
+          {/* New Image */}
+          <div className="w-full md:w-1/2 flex justify-center">
+            <img
+              src={Scottburghhigh} // Change this to your new imported image
+              alt="Scottburgh high 100% matric pass rate in 2019"
+              className="w-full max-w-md rounded-xl shadow-2xl border-4 border-blue-500"
+            />
+          </div>
+        </div>
 
       </div>
     </section>
