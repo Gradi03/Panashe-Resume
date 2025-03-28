@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import panden from '../assets/panden.jpg'; 
-import Scottburghhigh from '/assets/scottburghhigh.png'; 
 
 const experiences = [
   {
@@ -98,11 +97,10 @@ const Experience = () => {
 
           {/* New Image */}
           <div className="w-full md:w-1/2 flex justify-center">
-            <img
-              src={Scottburghhigh} // Change this to your new imported image
-              alt="Scottburgh high 100% matric pass rate in 2019"
-              className="w-full max-w-md rounded-xl shadow-2xl border-4 border-blue-500"
-            />
+          <img src="/assets/Scottburghhigh.png"alt="Scottburgh high 100% matric pass rate in 2019"
+              className="w-full max-w-md rounded-xl shadow-2xl border-4 border-blue-500" />
+
+            
           </div>
         </div>
 
