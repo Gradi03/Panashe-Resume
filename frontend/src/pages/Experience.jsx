@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import panden from '/src/assets/panden.jpg'; // Import images properly
-import Scottburghhigh from '../assets/Scottburghhigh.png'; // Import images properly
+import panden from '../assets/panden.jpg'; 
+import Scottburghhigh from '../assets/Scottburghhigh.png'; 
 
 const experiences = [
   {
