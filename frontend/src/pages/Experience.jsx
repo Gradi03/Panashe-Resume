@@ -50,7 +50,7 @@ const Experience = () => {
           viewport={{ once: true }}
           transition={{ duration: 1 }}
         >
-          Work Experience
+          Work Experiencesss
         </motion.h2>
 
         <div className="relative border-l-4 border-blue-500 pl-8 space-y-12">
