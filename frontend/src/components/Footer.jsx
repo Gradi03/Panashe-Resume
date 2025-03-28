@@ -54,7 +54,7 @@ const Footer = () => {
       </div>
 
       {/* Horizontal Line & Copyright */}
-      <hr className="border-gray-600 mt-6" />
+      <hr className="border-white-600 mt-6" />
       <div className="text-center py-4 text-white-400 text-sm">
         <p>&copy; 2025 Panashe. All rights reserved.</p>
         <p>Coded by <span className="text-yellow-400 font-semibold">Ninja Tech Design</span></p>

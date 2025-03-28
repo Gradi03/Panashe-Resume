@@ -22,9 +22,9 @@ const Reviews = () => {
           </motion.h3>
           <div className="space-y-8">
             {[
-              { name: 'John Doe', review: 'A highly skilled and dedicated professional. Always delivers top-notch work!' },
-              { name: 'Jane Smith', review: 'Great team player and problem solver. Pleasure to work with!' },
-              { name: 'Michael Johnson', review: 'Incredibly talented and consistently exceeds expectations.' },
+              { name: 'Sabelo Makhoba', review: 'Panashe is a passionate and diligent worker.His passion for IT and data makes him standout amongst other candidates!' },
+              { name: 'Deno Rautenbach', review: "Panashe is a driven individual and would be a valued asset at any company he's a part of!" },
+              { name: 'Wessel Havenga', review: 'I had the pleasure of working closely with Panashe during his time at DataBalk, and I can confidently say he is a very talented and driven young professional and I enjoyed the collaboration with him on projects. Panashe has an eagerness to learn and great problem-solving abilities, which makes him a key asset to the company. His interests in data analytics, Power BI, and SQL was always complemented by his friendly personality and willingness to help others. He consistently approached challenges with a fresh perspective and delivered quality solutions, especially in managing data and business intelligence.I have no doubt that his career will continue to flourish, and any team would be fortunate to have him on board.' },
             ].map((review, index) => (
               <motion.div
                 key={index}
