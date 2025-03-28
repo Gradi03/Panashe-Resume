@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import panden from '../assets/panden.jpg'; 
-import Scottburghhigh from '../assets/Scottburghhigh.png'; 
+import Scottburghhigh from '/assets/scottburghhigh.png'; 
 
 const experiences = [
   {
@@ -50,7 +50,7 @@ const Experience = () => {
           viewport={{ once: true }}
           transition={{ duration: 1 }}
         >
-          Work Experiencesss
+          Work Experiences
         </motion.h2>
 
         <div className="relative border-l-4 border-blue-500 pl-8 space-y-12">
