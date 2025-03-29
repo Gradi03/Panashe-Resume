@@ -66,12 +66,11 @@ const Experience = () => {
             >
               <span className="absolute -left-4 w-8 h-8 bg-blue-500 rounded-full border-4 border-white-300"></span>
 
-              {/* Display logo above the role */}
               {exp.logo && (
                 <img
                   src={exp.logo}
                   alt={exp.company}
-                  className="w-24 h-24 object-contain mb-4 border-2 border-blue-500 rounded-md" // Added blue border here
+                  className="w-24 h-24 object-contain mb-4 border-2 border-blue-500 rounded-md"
                 />
               )}
 
@@ -96,10 +95,8 @@ const Experience = () => {
           ))}
         </div>
 
-        {/* Embedded Video & New Image */}
         <div className="mt-20 flex flex-col md:flex-row justify-center items-center gap-6">
-          {/* Video */}
-          <div className="w-full md:w-1/2 rounded-xl overflow-hidden shadow-2xl border-4 border-blue-500">
+          <div className="w-full md:w-1/3 rounded-xl overflow-hidden shadow-2xl border-4 border-blue-500">
             <iframe
               width="100%"
               height="405"
@@ -111,8 +108,7 @@ const Experience = () => {
             ></iframe>
           </div>
 
-          {/* New Image */}
-          <div className="w-full md:w-1/2 flex justify-center">
+          <div className="w-full md:w-1/3 flex justify-center">
             <img
               src="/assets/scottburghhigh.png"
               alt="Scottburgh high 100% matric pass rate in 2019"
@@ -120,8 +116,16 @@ const Experience = () => {
               loading="lazy"
             />
           </div>
-        </div>
 
+          <div className="w-full md:w-1/3 flex justify-center">
+            <img
+              src={panden}
+              alt="Panden"
+              className="w-full max-w-md rounded-xl shadow-2xl border-4 border-blue-500"
+              loading="lazy"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -30,10 +30,15 @@ const Footer = () => {
         <div>
           <h3 className="text-xl font-semibold mb-4">Contact</h3>
           <p className="text-lg">Email: 
-            <a href="mailto:panashe@example.com" className="hover:text-yellow-400">panashe@example.com</a>
+            <a href="mailto:panashe@example.com" className="hover:text-yellow-400">panashemakonimeansbusiness@gmail.com</a>
           </p>
           <p className="text-lg">Phone: 
-            <a href="tel:+123456789" className="hover:text-yellow-400">+123 456 789</a>
+            <a href="tel:+27 63 054 5612" className="hover:text-yellow-400">+27 63 054 5612
+            </a>
+          </p>
+          <p className="text-lg">Address: 
+            Cape Town, South Africa
+            
           </p>
         </div>
 
