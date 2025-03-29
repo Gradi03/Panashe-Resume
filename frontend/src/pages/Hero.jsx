@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import * as THREE from "three";
 import CLOUDS from "vanta/dist/vanta.clouds.min";
-import { Book } from 'lucide-react'; // Importing the Book icon for "learn more"
+import { Book } from "lucide-react"; // Importing the Book icon for "learn more"
 
 const Hero = () => {
   const [roleIndex, setRoleIndex] = useState(0);
@@ -45,7 +45,7 @@ const Hero = () => {
     >
       <div className="relative text-center mx-auto space-y-6 md:w-2/3 lg:w-1/2">
         <motion.h1
-          className="text-5xl md:text-6xl font-extrabold text-gray-900 drop-shadow-lg"
+          className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 drop-shadow-lg"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -56,7 +56,7 @@ const Hero = () => {
         <AnimatePresence mode="wait">
           <motion.h2
             key={roleIndex}
-            className="text-3xl md:text-5xl font-semibold text-blue-600 drop-shadow-lg"
+            className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white drop-shadow-lg"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -67,7 +67,7 @@ const Hero = () => {
         </AnimatePresence>
 
         <motion.p
-          className="text-lg md:text-xl text-black-700 max-w-3xl mx-auto"
+          className="text-lg sm:text-xl md:text-2xl text-black-700 max-w-3xl mx-auto"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6, duration: 0.8 }}
@@ -76,14 +76,14 @@ const Hero = () => {
         </motion.p>
 
         <motion.button
-  className="mt-8 px-12 py-4 bg-blue-600 text-white font-semibold rounded-lg shadow-xl hover:scale-110 transition-all duration-300 flex items-center justify-center mx-auto"
-  initial={{ opacity: 0, scale: 0.8 }}
-  animate={{ opacity: 1, scale: 1 }}
-  transition={{ delay: 1, duration: 0.5 }}
-  onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })}
->
-  Learn More <Book className="ml-2" />
-</motion.button>
+          className="mt-8 px-6 sm:px-8 md:px-12 py-3 sm:py-4 md:py-4 bg-blue-600 text-white font-semibold rounded-lg shadow-xl hover:scale-110 transition-all duration-300 flex items-center justify-center mx-auto"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 1, duration: 0.5 }}
+          onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })}
+        >
+          Learn More <Book className="ml-2" />
+        </motion.button>
       </div>
     </section>
   );

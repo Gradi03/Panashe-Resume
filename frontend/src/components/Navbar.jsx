@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-gradient-to-r from-blue-600 to-indigo-700 p-4 fixed w-full top-0 left-0 z-50 shadow-lg">
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="container mx-auto flex justify-between items-center max-w-screen-xl">
         {/* Logo */}
         <div className="text-white text-3xl font-extrabold tracking-widest">
           <Link to="home" smooth={true} duration={500} className="cursor-pointer flex items-center">
@@ -77,22 +77,22 @@ const Navbar = () => {
           isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
-        <Link to="home" smooth={true} duration={500} className="text-white hover:text-yellow-400 cursor-pointer block">
+        <Link to="home" smooth={true} duration={500} className="text-white hover:text-yellow-400 cursor-pointer block py-2">
           Home
         </Link>
-        <Link to="about" smooth={true} duration={500} className="text-white hover:text-yellow-400 cursor-pointer block">
+        <Link to="about" smooth={true} duration={500} className="text-white hover:text-yellow-400 cursor-pointer block py-2">
           About
         </Link>
-        <Link to="skills" smooth={true} duration={500} className="text-white hover:text-yellow-400 cursor-pointer block">
+        <Link to="skills" smooth={true} duration={500} className="text-white hover:text-yellow-400 cursor-pointer block py-2">
           Skills
         </Link>
-        <Link to="experience" smooth={true} duration={500} className="text-white hover:text-yellow-400 cursor-pointer block">
+        <Link to="experience" smooth={true} duration={500} className="text-white hover:text-yellow-400 cursor-pointer block py-2">
           Experience
         </Link>
-        <Link to="education" smooth={true} duration={500} className="text-white hover:text-yellow-400 cursor-pointer block">
+        <Link to="education" smooth={true} duration={500} className="text-white hover:text-yellow-400 cursor-pointer block py-2">
           Education
         </Link>
-        <Link to="contact" smooth={true} duration={500} className="text-white hover:text-yellow-400 cursor-pointer block">
+        <Link to="contact" smooth={true} duration={500} className="text-white hover:text-yellow-400 cursor-pointer block py-2">
           Contact
         </Link>
       </div>

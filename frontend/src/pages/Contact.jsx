@@ -3,8 +3,12 @@ import { motion } from 'framer-motion';
 import Swal from 'sweetalert2';
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isLoading, setIsLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -51,9 +55,9 @@ const ContactForm = () => {
 
   return (
     <section id="contact" className="py-24 bg-gradient-to-br from-indigo-50 to-white text-gray-900">
-      <div className="max-w-3xl mx-auto px-6">
+      <div className="max-w-4xl mx-auto px-6">
         <motion.h2
-          className="text-5xl font-extrabold text-indigo-600 text-center mb-10"
+          className="text-4xl sm:text-5xl font-extrabold text-indigo-600 text-center mb-10"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

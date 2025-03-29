@@ -45,7 +45,7 @@ const Experience = () => {
     <section id="experience" className="py-24 bg-gradient-to-br from-blue-50 to-white text-gray-900">
       <div className="max-w-6xl mx-auto px-6">
         <motion.h2
-          className="text-5xl font-extrabold text-gray-800 text-center mb-16"
+          className="text-4xl sm:text-5xl font-extrabold text-gray-800 text-center mb-16"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -70,7 +70,7 @@ const Experience = () => {
                 <img
                   src={exp.logo}
                   alt={exp.company}
-                  className="w-24 h-24 object-contain mb-4 border-2 border-blue-500 rounded-md"
+                  className="w-20 h-20 sm:w-24 sm:h-24 object-contain mb-4 border-2 border-blue-500 rounded-md"
                 />
               )}
 
@@ -79,27 +79,27 @@ const Experience = () => {
                   loading="lazy"
                   src={exp.image}
                   alt={exp.company}
-                  className="w-28 h-28 md:w-36 md:h-36 object-cover rounded-xl shadow-md border-2 border-blue-500"
+                  className="w-28 h-28 sm:w-36 sm:h-36 md:w-40 md:h-40 object-cover rounded-xl shadow-md border-2 border-blue-500"
                 />
               )}
 
-              <div className="text-left flex-1">
-                <h3 className="text-2xl font-bold text-blue-600">{exp.role}</h3>
-                <p className="text-lg text-gray-700 font-medium mt-1">
+              <div className="text-left flex-1 mt-4 sm:mt-0">
+                <h3 className="text-xl sm:text-2xl font-bold text-blue-600">{exp.role}</h3>
+                <p className="text-md sm:text-lg text-gray-700 font-medium mt-1">
                   {exp.company} ({exp.location})
                 </p>
                 <p className="text-md font-semibold text-gray-600 mt-2">{exp.duration}</p>
-                <p className="text-gray-700 text-md leading-relaxed mt-2">{exp.description}</p>
+                <p className="text-gray-700 text-sm sm:text-md leading-relaxed mt-2">{exp.description}</p>
               </div>
             </motion.div>
           ))}
         </div>
 
         <div className="mt-20 flex flex-col md:flex-row justify-center items-center gap-6">
-          <div className="w-full md:w-1/3 rounded-xl overflow-hidden shadow-2xl border-4 border-blue-500">
+          <div className="w-full sm:w-1/2 md:w-1/3 rounded-xl overflow-hidden shadow-2xl border-4 border-blue-500">
             <iframe
               width="100%"
-              height="405"
+              height="315"
               src="https://www.youtube.com/embed/wJIfAvE7hWE"
               title="How I Became an AI Engineer"
               frameBorder="0"
@@ -108,7 +108,7 @@ const Experience = () => {
             ></iframe>
           </div>
 
-          <div className="w-full md:w-1/3 flex justify-center">
+          <div className="w-full sm:w-1/2 md:w-1/3 flex justify-center">
             <img
               src="/assets/scottburghhigh.png"
               alt="Scottburgh high 100% matric pass rate in 2019"
@@ -117,7 +117,7 @@ const Experience = () => {
             />
           </div>
 
-          <div className="w-full md:w-1/3 flex justify-center">
+          <div className="w-full sm:w-1/2 md:w-1/3 flex justify-center">
             <img
               src={panden}
               alt="Panden"

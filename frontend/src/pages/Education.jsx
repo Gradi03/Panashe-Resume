@@ -27,7 +27,7 @@ const Education = () => {
     <section id="education" className="py-24 bg-gradient-to-br from-blue-50 text-gray-900">
       <div className="max-w-4xl mx-auto px-6">
         <motion.h2
-          className="text-5xl font-extrabold text-blue-600 text-center mb-16"
+          className="text-4xl sm:text-5xl font-extrabold text-blue-600 text-center mb-16"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -47,17 +47,18 @@ const Education = () => {
               transition={{ duration: 0.8, delay: index * 0.2 }}
             >
               <span className="absolute -left-4 w-8 h-8 bg-blue-500 rounded-full border-4 border-white"></span>
+
               {/* School Logo */}
               <img
                 src={edu.logo} // Dynamically load the logo from the data
                 alt={edu.institution}
-                // className="w-12 h-12 md:w-16 md:h-16 object-cover rounded-full mb-4 border-2 border-indigo-500"
-                className="w-12 h-12 md:w-16 md:h-16 rounded-xl shadow-2xl border-4 border-blue-500"
-              loading="lazy"
+                className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-xl shadow-2xl border-4 border-blue-500 mb-4"
+                loading="lazy"
               />
-              <h3 className="text-2xl font-bold text-blue-600">{edu.title}</h3>
-              <p className="text-lg text-gray-700 font-medium mt-1">{edu.institution}</p>
-              <p className="text-md font-semibold text-gray-600 mt-2">{edu.duration}</p>
+
+              <h3 className="text-xl sm:text-2xl font-bold text-blue-600">{edu.title}</h3>
+              <p className="text-md sm:text-lg text-gray-700 font-medium mt-1">{edu.institution}</p>
+              <p className="text-sm sm:text-md font-semibold text-gray-600 mt-2">{edu.duration}</p>
             </motion.div>
           ))}
         </div>

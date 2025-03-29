@@ -6,7 +6,7 @@ const Skills = () => {
   return (
     <section id="skills" className="py-24 bg-gradient-to-br from-blue-50 text-gray-900 text-center">
       <motion.h2
-        className="text-5xl font-extrabold text-gray-800 mb-10"
+        className="text-4xl sm:text-5xl font-extrabold text-gray-800 mb-10"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -33,15 +33,15 @@ const Skills = () => {
         ].map((skill, index) => (
           <motion.div
             key={index}
-            className="flex flex-col items-center bg-white-200 rounded-lg p-6 shadow-lg hover:shadow-2xl transform transition-all duration-300"
+            className="flex flex-col items-center bg-white rounded-lg p-6 shadow-lg hover:shadow-2xl transform transition-all duration-300"
             whileInView={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: 30 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: index * 0.2 }}
           >
             <div className="text-blue-600 text-4xl mb-4">{skill.icon}</div>
-            <h3 className="text-2xl font-semibold mb-2">{skill.title}</h3>
-            <p className="text-center text-lg text-gray-700">{skill.desc}</p>
+            <h3 className="text-lg sm:text-2xl font-semibold mb-2">{skill.title}</h3>
+            <p className="text-center text-base sm:text-lg text-gray-700">{skill.desc}</p>
           </motion.div>
         ))}
       </motion.div>

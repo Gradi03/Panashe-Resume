@@ -11,7 +11,7 @@ const About = () => {
       {/* Text Section */}
       <div className="md:w-1/2 space-y-6 text-center md:text-left">
         <motion.h2
-          className="text-4xl font-extrabold text-blue-600 mb-4"
+          className="text-3xl sm:text-4xl font-extrabold text-blue-600 mb-4"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -21,7 +21,7 @@ const About = () => {
         </motion.h2>
 
         <motion.p
-          className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto"
+          className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -31,7 +31,7 @@ const About = () => {
         </motion.p>
 
         <motion.p
-          className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto"
+          className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -49,7 +49,7 @@ const About = () => {
         viewport={{ once: true }}
         transition={{ duration: 1, delay: 1.5 }}
       >
-        <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl border-8 border-blue-500">
+        <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl border-8 border-blue-500">
           <img
             src={PanasheImage}
             alt="Panashe"

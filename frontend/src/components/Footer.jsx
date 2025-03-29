@@ -5,7 +5,7 @@ import { FaTwitter, FaGithub, FaEnvelope, FaPhoneAlt, FaLinkedin } from 'react-i
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white mt-16 py-8">
-      <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
+      <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6 text-start md:text-left">
         
         {/* Navigation Links */}
         <nav>
@@ -33,32 +33,25 @@ const Footer = () => {
             <a href="mailto:panashe@example.com" className="hover:text-yellow-400">panashemakonimeansbusiness@gmail.com</a>
           </p>
           <p className="text-lg">Phone: 
-            <a href="tel:+27 63 054 5612" className="hover:text-yellow-400">+27 63 054 5612
-            </a>
+            <a href="tel:+27 63 054 5612" className="hover:text-yellow-400">+27 63 054 5612</a>
           </p>
           <p className="text-lg">Address: 
             Cape Town, South Africa
-            
           </p>
         </div>
 
         {/* Social Media Links */}
-        <div className="flex flex-col items-center md:items-start">
+        <div className="flex flex-col items-start md:items-start">
           <h3 className="text-xl font-semibold mb-4">Follow Me</h3>
           <div className="flex space-x-6 justify-center md:justify-start">
-            {/* <a href="https://twitter.com/panashe" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 text-3xl">
-              <FaTwitter />
-            </a> */}
-            
             <a href="https://linkedin.com/in/panashe-makoni/" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 text-3xl">
-  <FaLinkedin />
-</a>
+              <FaLinkedin />
+            </a>
 
             <a href="mailto:panashemakonimeansbusiness@gmail.com" className="hover:text-yellow-400 text-3xl">
               <FaEnvelope />
             </a>
-            <a href="tel:+27 63 054 5612
-" className="hover:text-yellow-400 text-3xl">
+            <a href="tel:+27 63 054 5612" className="hover:text-yellow-400 text-3xl">
               <FaPhoneAlt />
             </a>
           </div>
@@ -69,7 +62,9 @@ const Footer = () => {
       <hr className="border-white-600 mt-8" />
       <div className="text-center py-4 text-white-400 text-sm">
         <p>&copy; 2025 Panashe. All rights reserved.</p>
-        <p>Coded by <span className="text-yellow-400 font-semibold">Ninja Tech Design</span></p>
+        <p>
+          Coded by <a href="https://ninjatechdesign.netlify.app" target="_blank" className="text-yellow-400 font-semibold hover:underline">Ninja Tech Design</a>
+        </p>
       </div>
     </footer>
   );
