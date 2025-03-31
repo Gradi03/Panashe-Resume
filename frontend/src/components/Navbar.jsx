@@ -56,22 +56,24 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden absolute top-full left-0 w-full bg-indigo-700 shadow-lg transition-transform duration-300 ease-in-out ${
-          isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-5'
+        className={`md:hidden absolute top-0 left-0 w-2/3 bg-indigo-700 shadow-lg transition-all duration-300 ease-in-out transform ${
+          isOpen ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'
         }`}
       >
-        {["home", "about", "skills", "experience", "education", "contact"].map((section) => (
-          <Link
-            key={section}
-            to={section}
-            smooth={true}
-            duration={500}
-            className="text-white hover:text-yellow-400 cursor-pointer block py-3"
-            onClick={() => setIsOpen(false)}
-          >
-            {section.charAt(0).toUpperCase() + section.slice(1)}
-          </Link>
-        ))}
+        <div className="flex flex-col items-start py-4 px-6">
+          {["home", "about", "skills", "experience", "education", "contact"].map((section) => (
+            <Link
+              key={section}
+              to={section}
+              smooth={true}
+              duration={500}
+              className="text-white hover:text-yellow-400 cursor-pointer py-3"
+              onClick={() => setIsOpen(false)}
+            >
+              {section.charAt(0).toUpperCase() + section.slice(1)}
+            </Link>
+          ))}
+        </div>
       </div>
     </nav>
   );

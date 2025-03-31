@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import panden from '../assets/panden.jpg'; 
+import databalk from '../assets/databalk.png'; 
 import cashCrusadersLogo from '/assets/logos/cashcrusaders.jpg'; // Add the logo import
 
 const experiences = [
@@ -11,7 +12,7 @@ const experiences = [
     duration: 'Jan 2024 – Present (1 yr 3 mos)',
     description:
       'Analyzing complex data sets and applying machine learning algorithms to extract insights. Building predictive models and data pipelines.',
-    image: panden, // Use the imported image
+    logo: databalk, // Use the imported image
   },
   {
     role: 'Data Analyst',
