@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-gradient-to-r from-blue-600 to-indigo-700 p-4 fixed w-full top-0 left-0 z-50 shadow-lg">
-      <div className="container mx-auto flex justify-between items-center max-w-screen-xl">
+      <div className="container mx-auto flex justify-between items-center max-w-4xl px-4">
         {/* Logo */}
         <div className="text-white text-3xl font-extrabold tracking-widest">
           <Link to="home" smooth={true} duration={500} className="cursor-pointer flex items-center">
@@ -20,25 +20,18 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Navigation Links */}
-        <div className="hidden md:flex space-x-8">
-          <Link to="home" smooth={true} duration={500} className="text-white hover:text-yellow-400 cursor-pointer">
-            Home
-          </Link>
-          <Link to="about" smooth={true} duration={500} className="text-white hover:text-yellow-400 cursor-pointer">
-            About
-          </Link>
-          <Link to="skills" smooth={true} duration={500} className="text-white hover:text-yellow-400 cursor-pointer">
-            Skills
-          </Link>
-          <Link to="experience" smooth={true} duration={500} className="text-white hover:text-yellow-400 cursor-pointer">
-            Experience
-          </Link>
-          <Link to="education" smooth={true} duration={500} className="text-white hover:text-yellow-400 cursor-pointer">
-            Education
-          </Link>
-          <Link to="contact" smooth={true} duration={500} className="text-white hover:text-yellow-400 cursor-pointer">
-            Contact
-          </Link>
+        <div className="hidden md:flex space-x-6">
+          {["home", "about", "skills", "experience", "education", "contact"].map((section) => (
+            <Link
+              key={section}
+              to={section}
+              smooth={true}
+              duration={500}
+              className="text-white hover:text-yellow-400 cursor-pointer"
+            >
+              {section.charAt(0).toUpperCase() + section.slice(1)}
+            </Link>
+          ))}
         </div>
 
         {/* Mobile Hamburger Menu */}
@@ -52,19 +45,9 @@ const Navbar = () => {
               xmlns="http://www.w3.org/2000/svg"
             >
               {isOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
               ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
               )}
             </svg>
           </button>
@@ -73,28 +56,22 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden ${isOpen ? 'block' : 'hidden'} mt-4 space-y-4 text-center transition-all duration-300 ease-in-out transform ${
-          isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        className={`md:hidden absolute top-full left-0 w-full bg-indigo-700 shadow-lg transition-transform duration-300 ease-in-out ${
+          isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-5'
         }`}
       >
-        <Link to="home" smooth={true} duration={500} className="text-white hover:text-yellow-400 cursor-pointer block py-2">
-          Home
-        </Link>
-        <Link to="about" smooth={true} duration={500} className="text-white hover:text-yellow-400 cursor-pointer block py-2">
-          About
-        </Link>
-        <Link to="skills" smooth={true} duration={500} className="text-white hover:text-yellow-400 cursor-pointer block py-2">
-          Skills
-        </Link>
-        <Link to="experience" smooth={true} duration={500} className="text-white hover:text-yellow-400 cursor-pointer block py-2">
-          Experience
-        </Link>
-        <Link to="education" smooth={true} duration={500} className="text-white hover:text-yellow-400 cursor-pointer block py-2">
-          Education
-        </Link>
-        <Link to="contact" smooth={true} duration={500} className="text-white hover:text-yellow-400 cursor-pointer block py-2">
-          Contact
-        </Link>
+        {["home", "about", "skills", "experience", "education", "contact"].map((section) => (
+          <Link
+            key={section}
+            to={section}
+            smooth={true}
+            duration={500}
+            className="text-white hover:text-yellow-400 cursor-pointer block py-3"
+            onClick={() => setIsOpen(false)}
+          >
+            {section.charAt(0).toUpperCase() + section.slice(1)}
+          </Link>
+        ))}
       </div>
     </nav>
   );

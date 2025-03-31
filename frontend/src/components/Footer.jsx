@@ -1,71 +1,53 @@
 import React from 'react';
-import { Link } from 'react-scroll'; 
-import { FaTwitter, FaGithub, FaEnvelope, FaPhoneAlt, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white mt-16 py-8">
-      <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6 text-start md:text-left">
+    <footer className="bg-indigo-700 text-white py-8 mt-16">
+      <div className="container mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-center sm:text-left">
         
-        {/* Navigation Links */}
-        <nav>
-          <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
-          <ul className="space-y-2">
-            {['Home', 'About', 'Skills', 'Experience', 'Education', 'Contact'].map((item) => (
-              <li key={item}>
-                <Link 
-                  to={item.toLowerCase()} 
-                  smooth={true} 
-                  duration={500} 
-                  className="hover:text-yellow-400 cursor-pointer text-lg"
-                >
-                  {item}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-
-        {/* Contact Information */}
+        {/* About Section */}
         <div>
-          <h3 className="text-xl font-semibold mb-4">Contact</h3>
-          <p className="text-lg">Email: 
-            <a href="mailto:panashe@example.com" className="hover:text-yellow-400">panashemakonimeansbusiness@gmail.com</a>
-          </p>
-          <p className="text-lg">Phone: 
-            <a href="tel:+27 63 054 5612" className="hover:text-yellow-400">+27 63 054 5612</a>
-          </p>
-          <p className="text-lg">Address: 
-            Cape Town, South Africa
+          <h3 className="text-xl font-semibold">About</h3>
+          <p className="text-gray-300 mt-2 text-sm">
+            Passionate about IT, data, and business intelligence. Always learning and growing.
           </p>
         </div>
 
-        {/* Social Media Links */}
-        <div className="flex flex-col items-start md:items-start">
-          <h3 className="text-xl font-semibold mb-4">Follow Me</h3>
-          <div className="flex space-x-6 justify-center md:justify-start">
-            <a href="https://linkedin.com/in/panashe-makoni/" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 text-3xl">
-              <FaLinkedin />
-            </a>
+        {/* Quick Links */}
+        <div>
+          <h3 className="text-xl font-semibold">Quick Links</h3>
+          <ul className="mt-2 space-y-2">
+            {["home", "about", "skills", "experience", "education", "contact"].map((section) => (
+              <li key={section}>
+                <a href={`#${section}`} className="hover:text-yellow-400 transition">
+                  {section.charAt(0).toUpperCase() + section.slice(1)}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
 
-            <a href="mailto:panashemakonimeansbusiness@gmail.com" className="hover:text-yellow-400 text-3xl">
-              <FaEnvelope />
+        {/* Social Media */}
+        <div>
+          <h3 className="text-xl font-semibold">Connect</h3>
+          <div className="flex space-x-4 flex-wrap justify-center md:justify-start mt-2">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+              <FaGithub className="text-2xl hover:text-yellow-400 transition" />
             </a>
-            <a href="tel:+27 63 054 5612" className="hover:text-yellow-400 text-3xl">
-              <FaPhoneAlt />
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <FaLinkedin className="text-2xl hover:text-yellow-400 transition" />
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+              <FaTwitter className="text-2xl hover:text-yellow-400 transition" />
             </a>
           </div>
         </div>
       </div>
 
-      {/* Horizontal Line & Copyright */}
-      <hr className="border-white-600 mt-8" />
-      <div className="text-center py-4 text-white-400 text-sm">
-        <p>&copy; 2025 Panashe. All rights reserved.</p>
-        <p>
-          Coded by <a href="https://ninjatechdesign.netlify.app" target="_blank" className="text-yellow-400 font-semibold hover:underline">Ninja Tech Design</a>
-        </p>
-      </div>
+      {/* Footer Bottom */}
+      <hr className="border-white opacity-40 mt-8" />
+      <p className="text-center text-sm text-gray-300 mt-4">© {new Date().getFullYear()} Panashe. All rights reserved.</p>
     </footer>
   );
 };

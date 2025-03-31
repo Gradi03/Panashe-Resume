@@ -39,53 +39,54 @@ const Hero = () => {
 
   return (
     <section
-      ref={vantaRef}
-      id="home"
-      className="min-h-screen flex flex-col justify-center items-center text-gray-900 px-6 py-12 relative overflow-hidden"
+  ref={vantaRef}
+  id="home"
+  className="relative min-h-screen h-auto flex flex-col justify-center items-center text-gray-900 px-4 sm:px-6 py-12 overflow-hidden"
+>
+  <div className="relative text-center mx-auto space-y-6 w-full max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-3xl">
+    <motion.h1
+      className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 drop-shadow-lg"
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
     >
-      <div className="relative text-center mx-auto space-y-6 md:w-2/3 lg:w-1/2">
-        <motion.h1
-          className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 drop-shadow-lg"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          Hi, I'm Panashe
-        </motion.h1>
+      Hi, I'm Panashe
+    </motion.h1>
 
-        <AnimatePresence mode="wait">
-          <motion.h2
-            key={roleIndex}
-            className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white drop-shadow-lg"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.6 }}
-          >
-            {roles[roleIndex]}
-          </motion.h2>
-        </AnimatePresence>
+    <AnimatePresence mode="wait">
+      <motion.h2
+        key={roleIndex}
+        className="text-xl sm:text-2xl md:text-3xl font-semibold text-white drop-shadow-lg"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -20 }}
+        transition={{ duration: 0.6 }}
+      >
+        {roles[roleIndex]}
+      </motion.h2>
+    </AnimatePresence>
 
-        <motion.p
-          className="text-lg sm:text-xl md:text-2xl text-black-700 max-w-3xl mx-auto"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.6, duration: 0.8 }}
-        >
-          With a strong background in data analysis, machine learning, and business intelligence, I help organizations unlock the power of their data and drive intelligent decision-making.
-        </motion.p>
+    <motion.p
+      className="text-base sm:text-lg md:text-xl text-black-700 max-w-3xl mx-auto"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.6, duration: 0.8 }}
+    >
+      With a strong background in data analysis, machine learning, and business intelligence, I help organizations unlock the power of their data and drive intelligent decision-making.
+    </motion.p>
 
-        <motion.button
-          className="mt-8 px-6 sm:px-8 md:px-12 py-3 sm:py-4 md:py-4 bg-blue-600 text-white font-semibold rounded-lg shadow-xl hover:scale-110 transition-all duration-300 flex items-center justify-center mx-auto"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 1, duration: 0.5 }}
-          onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })}
-        >
-          Learn More <Book className="ml-2" />
-        </motion.button>
-      </div>
-    </section>
+    <motion.button
+      className="mt-6 sm:mt-8 px-4 sm:px-6 md:px-10 py-2 sm:py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-xl hover:scale-105 transition-all duration-300 flex items-center justify-center mx-auto"
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ delay: 1, duration: 0.5 }}
+      onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })}
+    >
+      Learn More <Book className="ml-2" />
+    </motion.button>
+  </div>
+</section>
+
   );
 };
 
