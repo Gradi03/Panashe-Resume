@@ -3,7 +3,8 @@ import { motion } from 'framer-motion';
 import panden from '../assets/panden.jpg'; 
 import databalk from '../assets/databalk.png'; 
 import cashCrusadersLogo from '/assets/logos/cashcrusaders.jpg'; // Add the logo import
-
+import jcLogo from '/assets/logos/jc.jpg'; 
+import Blood  from '/assets/logos/sanbs.png'; 
 const experiences = [
   {
     role: 'Data & AI Analyst',
@@ -30,6 +31,7 @@ const experiences = [
     duration: 'Jan 2021 – Feb 2023 (2 yrs 2 mos)',
     description:
       'Managed daily restaurant operations, customer interactions, staff oversight, and logistics to ensure an excellent dining experience.',
+      logo: jcLogo,
   },
   {
     role: 'Blood Donor Assistant',
@@ -38,6 +40,7 @@ const experiences = [
     duration: '2017 – 2021 (4 yrs)',
     description:
       'Assisted in donor care, ensuring smooth and efficient blood donation processes while educating donors on the importance of blood donation.',
+      logo: Blood,
   },
 ];
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap, CheckCircle, ShieldCheck, Server, Database, BarChart, Globe, Lock, Cloud } from 'lucide-react';
 
 const educationData = [
   {
@@ -8,63 +7,76 @@ const educationData = [
     institution: 'MANCOSA',
     duration: '2024 – 2025',
     logo: '/assets/logos/mancosa logo.jpg',
-    icon: <GraduationCap className="text-blue-600 w-6 h-6" />,
   },
   {
     title: 'Bachelor of Information & Communication Technology',
     institution: 'Durban University of Technology',
     duration: '2020 – 2022',
     logo: '/assets/logos/dut.jpg',
-    icon: <CheckCircle className="text-green-600 w-6 h-6" />,
   },
   {
     title: 'High School Diploma',
     institution: 'Scottburgh High School',
     duration: '2015 – 2019',
     logo: '/assets/logos/scrotburgh.png',
-    icon: <ShieldCheck className="text-purple-600 w-6 h-6" />,
+  },
+  {
+    title: 'Associate Member',
+    logo: '/assets/logos/iitpsa.jpg',
   },
   {
     title: 'Microsoft Certified: Azure Administrator Associate',
-    institution: 'Microsoft',
-    duration: '2023',
-    logo: '/assets/logos/microsoft.png',
-    icon: <Cloud className="text-blue-500 w-6 h-6" />,
+    logo: '/assets/logos/microsoft.jpg',
   },
   {
     title: 'Great Learning - Project Management',
-    institution: 'Great Learning',
-    duration: '2023',
-    logo: '/assets/logos/greatlearning.png',
-    icon: <Server className="text-orange-500 w-6 h-6" />,
+    logo: '/assets/logos/greatlearning.jpg',
   },
   {
     title: 'Great Learning - SQL for Data Science',
-    institution: 'Great Learning',
-    duration: '2023',
-    logo: '/assets/logos/greatlearning.png',
-    icon: <Database className="text-yellow-500 w-6 h-6" />,
+    logo: '/assets/logos/greatlearning.jpg',
   },
   {
     title: 'Microsoft Certified: Power BI Data Analyst Associate',
-    institution: 'Microsoft',
-    duration: '2023',
-    logo: '/assets/logos/microsoft.png',
-    icon: <BarChart className="text-indigo-500 w-6 h-6" />,
+    logo: '/assets/logos/microsoft.jpg',
   },
   {
-    title: 'IELTS Academic',
-    institution: 'IELTS',
-    duration: '2023',
-    logo: '/assets/logos/ielts.png',
-    icon: <Globe className="text-red-500 w-6 h-6" />,
+    title: 'Microsoft Certified: Azure AI Fundamentals',
+    logo: '/assets/logos/microsoft.jpg',
   },
+  {
+    title: 'Introduction to Cybersecurity',
+    logo: '/assets/logos/cisco.jpg',
+  },
+  {
+    title: 'Microsoft Certified: Power Platform Fundamentals',
+    logo: '/assets/logos/microsoft.jpg',
+  },
+  {
+    title: 'Microsoft Certified: Azure Fundamentals',
+    logo: '/assets/logos/microsoft.jpg',
+  },
+  {
+    title: 'Introduction to Packet Tracer',
+    logo: '/assets/logos/cisco.jpg',
+  },
+  {
+    title: 'Security Compliance, and Identity Fundamentals',
+    logo: '/assets/logos/cisco.jpg',
+  },
+  {
+    title: 'Microsoft Certified: Fabric Analytics Engineer Associate',
+    logo: '/assets/logos/microsoft.jpg',
+  },
+  // {
+  //   title: 'IELTS Academic',
+  //   institution: 'IELTS',
+  //   logo: '/assets/logos/.png',
+  // },
   {
     title: 'Microsoft Certified: Security, Compliance, and Identity Fundamentals',
     institution: 'Microsoft',
-    duration: '2023',
-    logo: '/assets/logos/microsoft.png',
-    icon: <Lock className="text-gray-500 w-6 h-6" />,
+    logo: '/assets/logos/microsoft.jpg',
   }
 ];
 
