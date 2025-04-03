@@ -75,7 +75,6 @@ const educationData = [
   // },
   {
     title: 'Microsoft Certified: Security, Compliance, and Identity Fundamentals',
-    institution: 'Microsoft',
     logo: '/assets/logos/microsoft.jpg',
   }
 ];
