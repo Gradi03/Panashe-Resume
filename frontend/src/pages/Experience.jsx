@@ -1,10 +1,20 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import panden from '../assets/panden.jpg'; 
+import classmates from '../assets/panmate.jpg'; 
+import panashedb1 from '../assets/panashedb1.jpg'; 
+import panashedb from '../assets/panashedb.jpg'; 
 import databalk from '../assets/databalk.png'; 
-import cashCrusadersLogo from '/assets/logos/cashcrusaders.jpg'; // Add the logo import
+import cashCrusadersLogo from '/assets/logos/cashcrusaders.jpg';
 import jcLogo from '/assets/logos/jc.jpg'; 
-import Blood  from '/assets/logos/sanbs.png'; 
+import Blood from '/assets/logos/sanbs.png';
+
+// SwiperJS
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+
 const experiences = [
   {
     role: 'Data & AI Analyst',
@@ -13,7 +23,7 @@ const experiences = [
     duration: 'Jan 2024 – Present (1 yr 3 mos)',
     description:
       'Analyzing complex data sets and applying machine learning algorithms to extract insights. Building predictive models and data pipelines.',
-    logo: databalk, // Use the imported image
+    logo: databalk,
   },
   {
     role: 'Data Analyst',
@@ -22,7 +32,7 @@ const experiences = [
     duration: 'Mar 2023 – Feb 2024 (1 yr)',
     description:
       'Performed data analysis and reporting to drive informed business decisions. Created dashboards and automated reporting processes.',
-    logo: cashCrusadersLogo, // Add the logo for Cash Crusaders
+    logo: cashCrusadersLogo,
   },
   {
     role: 'Junior Front-House Manager',
@@ -31,7 +41,7 @@ const experiences = [
     duration: 'Jan 2021 – Feb 2023 (2 yrs 2 mos)',
     description:
       'Managed daily restaurant operations, customer interactions, staff oversight, and logistics to ensure an excellent dining experience.',
-      logo: jcLogo,
+    logo: jcLogo,
   },
   {
     role: 'Blood Donor Assistant',
@@ -40,7 +50,7 @@ const experiences = [
     duration: '2017 – 2021 (4 yrs)',
     description:
       'Assisted in donor care, ensuring smooth and efficient blood donation processes while educating donors on the importance of blood donation.',
-      logo: Blood,
+    logo: Blood,
   },
 ];
 
@@ -48,6 +58,7 @@ const Experience = () => {
   return (
     <section id="experience" className="py-24 bg-gradient-to-br from-blue-50 to-white text-gray-900">
       <div className="max-w-6xl mx-auto px-6">
+        {/* Section Heading */}
         <motion.h2
           className="text-4xl sm:text-5xl font-extrabold text-gray-800 text-center mb-16"
           initial={{ opacity: 0, y: -20 }}
@@ -58,6 +69,7 @@ const Experience = () => {
           Work Experiences
         </motion.h2>
 
+        {/* Experience Timeline */}
         <div className="relative border-l-4 border-blue-500 pl-8 space-y-12">
           {experiences.map((exp, index) => (
             <motion.div
@@ -78,15 +90,6 @@ const Experience = () => {
                 />
               )}
 
-              {exp.image && (
-                <img
-                  loading="lazy"
-                  src={exp.image}
-                  alt={exp.company}
-                  className="w-28 h-28 sm:w-36 sm:h-36 md:w-40 md:h-40 object-cover rounded-xl shadow-md border-2 border-blue-500"
-                />
-              )}
-
               <div className="text-left flex-1 mt-4 sm:mt-0">
                 <h3 className="text-xl sm:text-2xl font-bold text-blue-600">{exp.role}</h3>
                 <p className="text-md sm:text-lg text-gray-700 font-medium mt-1">
@@ -99,11 +102,15 @@ const Experience = () => {
           ))}
         </div>
 
-        <div className="mt-20 flex flex-col md:flex-row justify-center items-center gap-6">
-          <div className="w-full sm:w-1/2 md:w-1/3 rounded-xl overflow-hidden shadow-2xl border-4 border-blue-500">
+        {/* --- Separated Video Section --- */}
+        <div className="mt-24 text-center">
+          <h3 className="text-2xl font-semibold text-blue-600 mb-4">
+            How I Became an AI Engineer
+          </h3>
+          <div className="mx-auto max-w-3xl rounded-xl overflow-hidden shadow-2xl border-4 border-blue-500">
             <iframe
               width="100%"
-              height="315"
+              height="400"
               src="https://www.youtube.com/embed/wJIfAvE7hWE"
               title="How I Became an AI Engineer"
               frameBorder="0"
@@ -111,24 +118,71 @@ const Experience = () => {
               className="rounded-lg"
             ></iframe>
           </div>
+        </div>
 
-          <div className="w-full sm:w-1/2 md:w-1/3 flex justify-center">
-            <img
-              src="/assets/scottburghhigh.png"
-              alt="Scottburgh high 100% matric pass rate in 2019"
-              className="w-full max-w-md rounded-xl shadow-2xl border-4 border-blue-500"
-              loading="lazy"
-            />
-          </div>
+        {/* --- Swiper Carousel --- */}
+        <div className="mt-24 max-w-7xl mx-auto">
+          <Swiper
+            modules={[Navigation, Autoplay]}
+            spaceBetween={20}
+            slidesPerView={1}
+            navigation
+            autoplay={{ delay: 3000 }}
+            loop={true}
+            breakpoints={{
+              768: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+            }}
+          >
+            <SwiperSlide>
+              <img
+                src="/assets/scottburghhigh.png"
+                alt="Scottburgh high 100% matric pass rate in 2019"
+                className="w-full max-w-md mx-auto rounded-xl shadow-2xl border-4 border-blue-500"
+                loading="lazy"
+              />
+            </SwiperSlide>
 
-          <div className="w-full sm:w-1/2 md:w-1/3 flex justify-center">
-            <img
-              src={panden}
-              alt="Panden"
-              className="w-full max-w-md rounded-xl shadow-2xl border-4 border-blue-500"
-              loading="lazy"
-            />
-          </div>
+            <SwiperSlide>
+              <img
+                src={panden}
+                alt="Panashe and deno"
+                className="w-full max-w-md mx-auto rounded-xl shadow-2xl border-4 border-blue-500"
+                loading="lazy"
+              />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <img
+                src={classmates}
+                alt="Panashes's high school classmate"
+                className="w-full max-w-md mx-auto rounded-xl shadow-2xl border-4 border-blue-500"
+                loading="lazy"
+              />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <img
+                src={panashedb1}
+                alt="Panashe"
+                className="w-full max-w-md mx-auto rounded-xl shadow-2xl border-4 border-blue-500"
+                loading="lazy"
+              />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <img
+                src={panashedb}
+                alt="Panashe at databalk"
+                className="w-full max-w-md mx-auto rounded-xl shadow-2xl border-4 border-blue-500"
+                loading="lazy"
+              />
+            </SwiperSlide>
+          </Swiper>
         </div>
       </div>
     </section>
